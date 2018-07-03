@@ -36,7 +36,6 @@ def home():
 def users():
     try:
         if session['username'] is not None:
-        
             res = get_mongo_connection().check_user(session['username'],session['password'])
             users = get_mongo_connection().get_users()
             print(users)
